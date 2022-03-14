@@ -3,7 +3,7 @@ pipeline {
   stages{
     stage("Git checkout"){
     steps{
-       git CredentialsId: 'github', url: 'https://github.com/kavithareddy7989/cmr.git'
+       'github', url: 'https://github.com/kavithareddy7989/cmr.git'
        }
     }
     stage("Maven Build"){
