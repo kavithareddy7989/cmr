@@ -3,7 +3,8 @@ pipeline {
   stages{
     stage("Git Checkout"){
      steps{
-       git CredentialsId: 'github' , url: 'https://github.com/kavithareddy7989/cmr.git'
+       withCredentials([gitUsernamePassword(credentialsId: 'fbf05c8b-26e3-444d-9028-19931ae297b2', gitToolName: 'git')]) {
+         }
        }
     }
     stage("Maven Clean Build "){
